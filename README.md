@@ -62,7 +62,7 @@ WantedBy=multi-user.target
 ⚠️ Đảm bảo bạn thay ubuntu22 bằng tên người dùng hiện tại nếu cần.
 ```
 ### 5.2. Kích hoạt dịch vụ
-
+```
 # Tải lại cấu hình systemd
 sudo systemctl daemon-reload
 
@@ -71,11 +71,7 @@ sudo systemctl enable --now minio
 
 # Kiểm tra trạng thái
 systemctl status minio
-
+```
 ## Bước 6: Kiểm Tra Truy Cập Giao Diện Quản Lý
 Truy cập trình duyệt với địa chỉ:
-
-cpp
-Copy
-Edit
-http://<IP-của-bạn>:9001
+```http://<IP-của-bạn>:9001```
