@@ -21,7 +21,7 @@ sudo mv minio /usr/local/bin/
 ```
 
 ## Bước 2: Tạo Thư Mục Dữ Liệu và Người Dùng MinIO
-
+```
 # Tạo thư mục dữ liệu
 mkdir -p ~/minio/data
 
@@ -36,15 +36,15 @@ export MINIO_ROOT_PASSWORD="minioadmin"
 Sau đó chạy:
 
 source ~/.bashrc
-
+```
 
 ## Bước 4: Chạy Thử MinIO Thủ Công
-minio server ~/minio/data --console-address ":9001"
+```minio server ~/minio/data --console-address ":9001"```
 Mở trình duyệt và truy cập: http://localhost:9001
 
 ## Bước 5: Cài Đặt MinIO Chạy Dưới Dạng Dịch Vụ Systemd
 ### 5.1. Tạo file service
-sudo nano /etc/systemd/system/minio.service
+```sudo nano /etc/systemd/system/minio.service```
 Nội dung file:
 ``` [Unit]
 Description=MinIO Storage Server
@@ -71,7 +71,8 @@ sudo systemctl enable --now minio
 
 # Kiểm tra trạng thái
 systemctl status minio
-Bước 6: Kiểm Tra Truy Cập Giao Diện Quản Lý
+
+## Bước 6: Kiểm Tra Truy Cập Giao Diện Quản Lý
 Truy cập trình duyệt với địa chỉ:
 
 cpp
